@@ -1,0 +1,114 @@
+<!-- Title -->
+<div class="title-container">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="d-flex pb-5 cursor-pointer">
+      <div class="pr-4">
+        <mat-icon class="big-icon">room</mat-icon>
+      </div>
+      <div class="title-text">
+        <div>
+          <span class="mat-display-3">Find your home</span>
+        </div>
+        <div class="d-flex justify-content-end">
+          <span class="mat-subheading-2">houses and apartments</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content container -->
+<div class="container pb-5">
+  <!-- Search -->
+  <div class="content-container d-flex justify-content-center pb-5">
+    <div class="d-flex align-items-center">
+      <div class="d-flex align-items-center pr-3">
+        <mat-icon>search</mat-icon>
+      </div>
+      <div>
+        <mat-form-field class="search-input">
+          <input matInput placeholder="Search by neighborhood">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <!-- Houses -->
+  <div class="pb-5">
+    <div class="pb-5">
+      <mat-card class="grow cursor-pointer mat-elevation-z3 px-5 py-4" [routerLink]="['id']">
+        <div class="d-flex">
+          <div class="advertisement-icon-container d-flex justify-content-center align-items-center">
+            <mat-icon class="advertisement-icon">home</mat-icon>
+          </div>
+          <div>
+            <div class="pb-4">
+              <div>
+                <span class="mat-title"><strong>Ressaca</strong></span>
+              </div>
+              <div>
+                <span class="mat-caption">Rua Coronel Francisco Antônio Pereira - Ressaca, Contagem - MG</span>
+              </div>
+            </div>
+            <div class="pb-4">
+              <p>
+                CASA DE 2 QUARTOS, SALA, COPA, COZINHA, BANHO SOCIAL, AREA DE SERVIÇPO COBERTA, TERRAÇO DE +/- 90 M², 1
+                VAGA COBERTA, ENTRADA INDEPENDENTE. *CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP: .
+              </p>
+            </div>
+            <div class="d-flex justify-content-end">
+              <div class="d-flex align-items-center">
+                <div class="pr-2">
+                  <span>R$</span>
+                </div>
+                <div>
+                  <span class="mat-display-1">800,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+    <div class="pb-5">
+      <mat-card class="grow cursor-pointer mat-elevation-z3 px-5 py-4" [routerLink]="['id']">
+        <div class="d-flex">
+          <div class="advertisement-icon-container d-flex justify-content-center align-items-center">
+            <mat-icon class="advertisement-icon">apartment</mat-icon>
+          </div>
+          <div>
+            <div class="pb-4">
+              <div>
+                <span class="mat-title"><strong>Ressaca</strong></span>
+              </div>
+              <div>
+                <span class="mat-caption">Rua Coronel Francisco Antônio Pereira - Ressaca, Contagem - MG</span>
+              </div>
+            </div>
+            <div class="pb-4">
+              <p>
+                CASA DE 2 QUARTOS, SALA, COPA, COZINHA, BANHO SOCIAL, AREA DE SERVIÇPO COBERTA, TERRAÇO DE +/- 90 M², 1
+                VAGA
+                COBERTA, ENTRADA INDEPENDENTE. *CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP: .
+              </p>
+            </div>
+            <div class="d-flex justify-content-end">
+              <div class="d-flex align-items-center">
+                <div class="pr-2">
+                  <span>R$</span>
+                </div>
+                <div>
+                  <span class="mat-display-1">800,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<!-- Add house button -->
+<div class="add-house-btn bg-primary cursor-pointer mat-elevation-z4" matTooltip="Add my home" matTooltipPosition="left"
+  [routerLink]="['add']" matRipple>
+  <mat-icon class="add-house-icon">add</mat-icon>
+</div>

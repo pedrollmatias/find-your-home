@@ -1,0 +1,57 @@
+.title-container {
+  height: 440px;
+  background: linear-gradient(176deg, #f7bb82, #e05656 60%, transparent 60%);
+}
+
+.big-icon {
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 50px !important;
+  color: white;
+}
+
+.title-text {
+  color: white;
+}
+
+.content-container {
+  margin-top: -35px;
+}
+
+.search-input-card-container {
+  border-radius: 100px;
+}
+
+.search-input {
+  width: 500px;
+}
+
+.advertisement-icon-container {
+  width: 800px;
+}
+
+.advertisement-icon {
+  width: 75px !important;
+  height: 75px !important;
+  font-size: 75px !important;
+  color: #c2c2c2;
+}
+
+.add-house-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: fixed;
+  right: 30px;
+  bottom: 70px;
+  width: 60px;
+  height: 60px;
+}
+
+.add-house-icon {
+  width: 30px !important;
+  height: 30px !important;
+  font-size: 30px !important;
+  color: white;
+}

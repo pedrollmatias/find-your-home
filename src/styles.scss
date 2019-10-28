@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: '"Poppins", sans-serif;'
+);
+@include mat-core($custom-typography);
+
+$my-app-primary: mat-palette($mat-red, 400);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Poppins", sans-serif; }
+
+:focus {
+  outline: none !important;
+}
+
+button {
+  border-radius: 1000px !important;
+}
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  color: white !important;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.grow { transition: all .2s ease-in-out !important; }
+.grow:hover { transform: scale(1.03) !important; }
+
+.inline-input .mat-form-field-infix {
+  border-top: 0px !important;
+}
+
+.inline-input .mat-form-field-wrapper {
+  padding-bottom: 0px !important;
+}
+
+.inline-input .mat-form-field-underline {
+  bottom: 0px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.mat-tooltip {
+  font-size: 14px !important;
+}
+
+.bg-primary {
+  background: #EF5350 !important;
+}
+
+.color-primary {
+  color: #EF5350 !important;
+}
+
+.color-light-grey {
+  color: #c2c2c2 !important;
+}
+
+.outline-none {
+  outline: none !important;
+}
+
+.medium-icon {
+  width: 35px !important;
+  height: 35px !important;
+  font-size: 35px !important;
+}
