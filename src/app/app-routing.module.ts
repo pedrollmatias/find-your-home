@@ -8,7 +8,7 @@ import { HouseComponent } from './modules/rent/pages/house/house.component';
 const routes: Routes = [
   { path: 'rent/houses', component: HousesComponent },
   { path: 'rent/houses/add', component: AddHouseComponent },
-  { path: 'rent/houses/id', component: HouseComponent },
+  { path: 'rent/houses/:id', component: HouseComponent },
   { path: '', redirectTo: 'rent/houses', pathMatch: 'full' },
   { path: '**', redirectTo: 'rent/houses', pathMatch: 'full' },
 ];

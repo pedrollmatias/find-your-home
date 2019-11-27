@@ -1,4 +1,4 @@
-<div class="container py-5">
+<div class="container py-5" *ngIf="home">
   <!-- Title logo -->
   <div class="d-flex justify-content-center align-items-center cursor-pointer pb-4">
     <div class="d-flex outline-none" [routerLink]="['/rent', 'houses']">
@@ -54,10 +54,10 @@
         <div class="d-flex justify-content-between pb-5">
           <div>
             <div>
-              <span class="mat-title"><strong>Ressaca</strong></span>
+              <span class="mat-title"><strong>{{home.bairro}}</strong></span>
             </div>
             <div>
-              <span>Rua Coronel Francisco Antônio Pereira - Ressaca, Contagem - MG</span>
+              <span>{{home.rua}} - {{home.bairro}}, {{home.cidade}} - {{home.estado}}</span>
             </div>
           </div>
           <div class="d-flex align-items-center">
@@ -65,7 +65,7 @@
               <span>R$</span>
             </div>
             <div>
-              <span class="mat-display-1">800,00</span>
+              <span class="mat-display-1">{{home.valor_aluguel}}</span>
             </div>
           </div>
         </div>
@@ -79,44 +79,68 @@
         <div class="d-flex justify-content-around pb-5">
           <div class="d-flex">
             <div class="pr-3">
-              <mat-icon class="medium-icon">airline_seat_flat</mat-icon>
+              <mat-icon class="medium-icon" matTooltip="Número de quartos">airline_seat_flat</mat-icon>
             </div>
             <div class="d-flex justify-content-center">
-              <span class="mat-title">1</span>
+              <span class="mat-title" >{{home.nquartos}}</span>
+            </div>
+          </div>
+          <div class="d-flex">
+              <div class="pr-3">
+                <mat-icon class="medium-icon" matTooltip="Número de suites">home</mat-icon>
+              </div>
+              <div class="d-flex justify-content-center">
+                <span class="mat-title" >{{home.nsuites}}</span>
+              </div>
+          </div>
+          <div class="d-flex">
+            <div class="pr-3">
+              <mat-icon class="medium-icon" matTooltip="Número de salas de estar">event_seat</mat-icon>
+            </div>
+            <div class="d-flex justify-content-center">
+              <span class="mat-title">{{home.nsalas_estar}}</span>
+            </div>
+          </div>
+          <div class="d-flex" *ngIf="home.tipo == 'apartamento'">
+              <div class="pr-3">
+                <mat-icon class="medium-icon" matTooltip="Número de salas de jantar">restaurant_menu</mat-icon>
+              </div>
+              <div class="d-flex justify-content-center">
+                <span class="mat-title">{{home.nsalas_jantar}}</span>
+              </div>
+          </div>
+          <div class="d-flex">
+            <div class="pr-3">
+              <mat-icon class="medium-icon" matTooltip="Número de vagas na garagem">directions_car</mat-icon>
+            </div>
+            <div class="d-flex justify-content-center">
+              <span class="mat-title">{{home.nvagas}}</span>
             </div>
           </div>
           <div class="d-flex">
             <div class="pr-3">
-              <mat-icon class="medium-icon">bathtub</mat-icon>
+              <mat-icon class="medium-icon" matTooltip="Número de armários embutido">view_column</mat-icon>
             </div>
             <div class="d-flex justify-content-center">
-              <span class="mat-title">1</span>
+              <span class="mat-title">{{home.armario_embutido}}</span>
             </div>
           </div>
-          <div class="d-flex">
-            <div class="pr-3">
-              <mat-icon class="medium-icon">event_seat</mat-icon>
+          <div class="d-flex" *ngIf="home.tipo == 'apartamento'">
+              <div class="pr-3">
+                <mat-icon class="medium-icon" matTooltip="Número do andar">location_city</mat-icon>
+              </div>
+              <div class="d-flex justify-content-center">
+                <span class="mat-title">{{home.andar}}</span>
+              </div>
             </div>
-            <div class="d-flex justify-content-center">
-              <span class="mat-title">2</span>
+          <div class="d-flex" *ngIf="home.tipo == 'apartamento'">
+              <div class="pr-3">
+                <mat-icon class="medium-icon" matTooltip="Valor do condominio">attach_money</mat-icon>
+              </div>
+              <div class="d-flex justify-content-center">
+                <span class="mat-title">{{home.valor_condominio}}</span>
+              </div>
             </div>
-          </div>
-          <div class="d-flex">
-            <div class="pr-3">
-              <mat-icon class="medium-icon">directions_car</mat-icon>
-            </div>
-            <div class="d-flex justify-content-center">
-              <span class="mat-title">3</span>
-            </div>
-          </div>
-          <div class="d-flex">
-            <div class="pr-3">
-              <mat-icon class="medium-icon">view_column</mat-icon>
-            </div>
-            <div class="d-flex justify-content-center">
-              <span class="mat-title">1</span>
-            </div>
-          </div>
         </div>
       </div>
       <div class="d-flex justify-content-center pb-5">

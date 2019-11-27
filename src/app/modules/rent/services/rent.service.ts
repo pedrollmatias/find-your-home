@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, pipe, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
@@ -8,18 +8,27 @@ import { catchError } from 'rxjs/operators';
 })
 export class RentService {
 
-  baseUrl: 'http://localhost:3000';
+  baseUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
   // Get homes
   getHomes(): Observable<any> {
-    return this.http.get(this.baseUrl)
-    .pipe(
-      catchError(this.errorHandler)
-    );
+    const url = this.baseUrl + '/rent';
+    console.log(url);
+    return this.http.get(url)
+      .pipe(
+        catchError(this.errorHandler)
+      );
   }
-
+  // Get homes
+  getHome(id: string): Observable<any> {
+    const url = this.baseUrl + '/rent/houses/' + id;
+    return this.http.get(url)
+      .pipe(
+        catchError(this.errorHandler)
+      );
+  }
   // Error handling
   errorHandler(error: any) {
     let errorMessage = '';

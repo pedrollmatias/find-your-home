@@ -33,8 +33,8 @@
   </div>
   <!-- Houses -->
   <div class="pb-5">
-    <div class="pb-5">
-      <mat-card class="grow cursor-pointer mat-elevation-z3 px-5 py-4" [routerLink]="['id']">
+    <div class="pb-5" *ngFor="let home of homes">
+      <mat-card class="grow cursor-pointer mat-elevation-z3 px-5 py-4" [routerLink]="[home.id]"> 
         <div class="d-flex">
           <div class="advertisement-icon-container d-flex justify-content-center align-items-center">
             <mat-icon class="advertisement-icon">home</mat-icon>
@@ -42,16 +42,15 @@
           <div>
             <div class="pb-4">
               <div>
-                <span class="mat-title"><strong>Ressaca</strong></span>
+                <span class="mat-title"><strong>{{home.bairro}}</strong></span>
               </div>
               <div>
-                <span class="mat-caption">Rua Coronel Francisco Antônio Pereira - Ressaca, Contagem - MG</span>
+                <span class="mat-caption">{{home.rua}}</span>
               </div>
             </div>
             <div class="pb-4">
               <p>
-                CASA DE 2 QUARTOS, SALA, COPA, COZINHA, BANHO SOCIAL, AREA DE SERVIÇPO COBERTA, TERRAÇO DE +/- 90 M², 1
-                VAGA COBERTA, ENTRADA INDEPENDENTE. *CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP: .
+                  {{home.descricao}}
               </p>
             </div>
             <div class="d-flex justify-content-end">
@@ -60,43 +59,7 @@
                   <span>R$</span>
                 </div>
                 <div>
-                  <span class="mat-display-1">800,00</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </mat-card>
-    </div>
-    <div class="pb-5">
-      <mat-card class="grow cursor-pointer mat-elevation-z3 px-5 py-4" [routerLink]="['id']">
-        <div class="d-flex">
-          <div class="advertisement-icon-container d-flex justify-content-center align-items-center">
-            <mat-icon class="advertisement-icon">apartment</mat-icon>
-          </div>
-          <div>
-            <div class="pb-4">
-              <div>
-                <span class="mat-title"><strong>Ressaca</strong></span>
-              </div>
-              <div>
-                <span class="mat-caption">Rua Coronel Francisco Antônio Pereira - Ressaca, Contagem - MG</span>
-              </div>
-            </div>
-            <div class="pb-4">
-              <p>
-                CASA DE 2 QUARTOS, SALA, COPA, COZINHA, BANHO SOCIAL, AREA DE SERVIÇPO COBERTA, TERRAÇO DE +/- 90 M², 1
-                VAGA
-                COBERTA, ENTRADA INDEPENDENTE. *CONDOMÍNIO E IPTU SÃO REFERENCIAIS E PODEM SOFRER ALTERACÕES.WHATSAPP: .
-              </p>
-            </div>
-            <div class="d-flex justify-content-end">
-              <div class="d-flex align-items-center">
-                <div class="pr-2">
-                  <span>R$</span>
-                </div>
-                <div>
-                  <span class="mat-display-1">800,00</span>
+                  <span class="mat-display-1">{{home.valor_aluguel}}</span>
                 </div>
               </div>
             </div>

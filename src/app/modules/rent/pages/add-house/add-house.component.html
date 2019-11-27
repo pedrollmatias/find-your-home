@@ -1,231 +1,233 @@
 <div class="container py-5">
+  <form>
+      <div class="d-flex justify-content-center align-items-center cursor-pointer pb-4">
+          <div class="d-flex outline-none" [routerLink]="['/rent', 'houses']">
+            <div class="color-primary pr-2 pt-1">
+              <mat-icon class="medium-icon">room</mat-icon>
+            </div>
+            <div class="title-text">
+              <div>
+                <span class="mat-display-1">Find your home</span>
+              </div>
+              <div class="d-flex justify-content-end">
+                <span class="mat-subheading-2">houses and apartments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Breadcumb -->
+        <div class="d-flex justify-content-end pb-4">
+          <div><span class="mat-caption color-primary cursor-pointer" [routerLink]="['/rent/houses']">Rent</span></div>
+          <div class="px-2">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </div>
+          <div><span class="mat-caption">Register home</span></div>
+        </div>
+        <!-- Form -->
+        <div class="pb-5">
+          <mat-card class="mat-elevation-z3 p-5">
+            <div class="pb-4">
+              <span class="mat-title"><strong>Home features</strong></span>
+            </div>
+            <div class="px-4">
+              <div class="d-flex align-items-center pb-4">
+                <!-- Home type -->
+                <div class="d-flex align-items-center pr-5">
+                  <div class="pr-4 mb-2">
+                    <span>Home type:</span>
+                  </div>
+                  <div>
+                    <mat-radio-group color="primary" aria-label="Home type">
+                      <mat-radio-button value="1">House</mat-radio-button>
+                      <mat-radio-button value="2">Apartment</mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                </div>
+                <!-- Home size -->
+                <div>
+                  <mat-form-field floatLabel="never">
+                    <mat-label>Home size (in m²)</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </div>
+              <!-- Features -->
+              <div class="d-flex justify-content-between">
+                <!-- Beds -->
+                <div class="d-flex align-items-center">
+                  <div class="pr-1">
+                    <span>Beds:</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                  </div>
+                  <div class="px-2">
+                    <span>1</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_up</mat-icon>
+                    </button>
+                  </div>
+                </div>
+                <!-- Baths -->
+                <div class="d-flex align-items-center">
+                  <div class="pr-1">
+                    <span>Baths:</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                  </div>
+                  <div class="px-2">
+                    <span>1</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_up</mat-icon>
+                    </button>
+                  </div>
+                </div>
+                <!-- Living rooms -->
+                <div class="d-flex align-items-center">
+                  <div class="pr-1">
+                    <span>Living rooms:</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                  </div>
+                  <div class="px-2">
+                    <span>1</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_up</mat-icon>
+                    </button>
+                  </div>
+                </div>
+                <!-- Garage -->
+                <div class="d-flex align-items-center">
+                  <div class="pr-1">
+                    <span>Garage:</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                  </div>
+                  <div class="px-2">
+                    <span>1</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_up</mat-icon>
+                    </button>
+                  </div>
+                </div>
+                <!-- Closet -->
+                <div class="d-flex align-items-center">
+                  <div class="pr-1">
+                    <span>Closets:</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
+                  </div>
+                  <div class="px-2">
+                    <span>1</span>
+                  </div>
+                  <div>
+                    <button mat-icon-button>
+                      <mat-icon>keyboard_arrow_up</mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="py-5">
+              <mat-divider [inset]="true"></mat-divider>
+            </div>
+            <div class="pb-4">
+              <span class="mat-title"><strong>Address</strong></span>
+            </div>
+            <div class="px-4">
+              <div class="d-flex">
+                <div class="pr-5">
+                  <mat-form-field>
+                    <mat-label>Postal code</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="flex-grow-1">
+                  <mat-form-field class="w-100">
+                    <mat-label>Address</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="pr-5">
+                  <mat-form-field>
+                    <mat-label>Number</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="pr-5">
+                  <mat-form-field>
+                    <mat-label>Complement</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div class="flex-grow-1 pr-5">
+                  <mat-form-field class="w-100">
+                    <mat-label>Neighborhood</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+                <div>
+                  <mat-form-field>
+                    <mat-label>State</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <div class="py-5">
+              <mat-divider [inset]="true"></mat-divider>
+            </div>
+            <div class="pb-4">
+              <span class="mat-title"><strong>Ad description</strong></span>
+            </div>
+            <div class="px-4">
+              <div>
+                <mat-form-field class="w-100">
+                  <mat-label>Description</mat-label>
+                  <textarea matInput></textarea>
+                </mat-form-field>
+              </div>
+              <div>
+                <mat-form-field>
+                  <mat-label>Rent price</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="d-flex justify-content-end pb-5">
+          <div class="pr-5">
+            <button mat-button class="px-4" [routerLink]="['/rent']">Cancel</button>
+          </div>
+          <div>
+            <button mat-flat-button class="px-4" color="primary">Add my home</button>
+          </div>
+        </div>
+  </form>
   <!-- Title logo -->
-  <div class="d-flex justify-content-center align-items-center cursor-pointer pb-4">
-    <div class="d-flex outline-none" [routerLink]="['/rent', 'houses']">
-      <div class="color-primary pr-2 pt-1">
-        <mat-icon class="medium-icon">room</mat-icon>
-      </div>
-      <div class="title-text">
-        <div>
-          <span class="mat-display-1">Find your home</span>
-        </div>
-        <div class="d-flex justify-content-end">
-          <span class="mat-subheading-2">houses and apartments</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Breadcumb -->
-  <div class="d-flex justify-content-end pb-4">
-    <div><span class="mat-caption color-primary cursor-pointer" [routerLink]="['/rent/houses']">Rent</span></div>
-    <div class="px-2">
-      <mat-icon>keyboard_arrow_right</mat-icon>
-    </div>
-    <div><span class="mat-caption">Register home</span></div>
-  </div>
-  <!-- Form -->
-  <div class="pb-5">
-    <mat-card class="mat-elevation-z3 p-5">
-      <div class="pb-4">
-        <span class="mat-title"><strong>Home features</strong></span>
-      </div>
-      <div class="px-4">
-        <div class="d-flex align-items-center pb-4">
-          <!-- Home type -->
-          <div class="d-flex align-items-center pr-5">
-            <div class="pr-4 mb-2">
-              <span>Home type:</span>
-            </div>
-            <div>
-              <mat-radio-group color="primary" aria-label="Home type">
-                <mat-radio-button value="1">House</mat-radio-button>
-                <mat-radio-button value="2">Apartment</mat-radio-button>
-              </mat-radio-group>
-            </div>
-          </div>
-          <!-- Home size -->
-          <div>
-            <mat-form-field floatLabel="never">
-              <mat-label>Home size (in m²)</mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-        </div>
-        <!-- Features -->
-        <div class="d-flex justify-content-between">
-          <!-- Beds -->
-          <div class="d-flex align-items-center">
-            <div class="pr-1">
-              <span>Beds:</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_down</mat-icon>
-              </button>
-            </div>
-            <div class="px-2">
-              <span>1</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_up</mat-icon>
-              </button>
-            </div>
-          </div>
-          <!-- Baths -->
-          <div class="d-flex align-items-center">
-            <div class="pr-1">
-              <span>Baths:</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_down</mat-icon>
-              </button>
-            </div>
-            <div class="px-2">
-              <span>1</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_up</mat-icon>
-              </button>
-            </div>
-          </div>
-          <!-- Living rooms -->
-          <div class="d-flex align-items-center">
-            <div class="pr-1">
-              <span>Living rooms:</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_down</mat-icon>
-              </button>
-            </div>
-            <div class="px-2">
-              <span>1</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_up</mat-icon>
-              </button>
-            </div>
-          </div>
-          <!-- Garage -->
-          <div class="d-flex align-items-center">
-            <div class="pr-1">
-              <span>Garage:</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_down</mat-icon>
-              </button>
-            </div>
-            <div class="px-2">
-              <span>1</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_up</mat-icon>
-              </button>
-            </div>
-          </div>
-          <!-- Closet -->
-          <div class="d-flex align-items-center">
-            <div class="pr-1">
-              <span>Closets:</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_down</mat-icon>
-              </button>
-            </div>
-            <div class="px-2">
-              <span>1</span>
-            </div>
-            <div>
-              <button mat-icon-button>
-                <mat-icon>keyboard_arrow_up</mat-icon>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="py-5">
-        <mat-divider [inset]="true"></mat-divider>
-      </div>
-      <div class="pb-4">
-        <span class="mat-title"><strong>Address</strong></span>
-      </div>
-      <div class="px-4">
-        <div class="d-flex">
-          <div class="pr-5">
-            <mat-form-field>
-              <mat-label>Postal code</mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-          <div class="flex-grow-1">
-            <mat-form-field class="w-100">
-              <mat-label>Address</mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="d-flex">
-          <div class="pr-5">
-            <mat-form-field>
-              <mat-label>Number</mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-          <div class="pr-5">
-            <mat-form-field>
-              <mat-label>Complement</mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-          <div class="flex-grow-1 pr-5">
-            <mat-form-field class="w-100">
-              <mat-label>Neighborhood</mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-          <div>
-            <mat-form-field>
-              <mat-label>State</mat-label>
-              <input matInput>
-            </mat-form-field>
-          </div>
-        </div>
-      </div>
-      <div class="py-5">
-        <mat-divider [inset]="true"></mat-divider>
-      </div>
-      <div class="pb-4">
-        <span class="mat-title"><strong>Ad description</strong></span>
-      </div>
-      <div class="px-4">
-        <div>
-          <mat-form-field class="w-100">
-            <mat-label>Description</mat-label>
-            <textarea matInput></textarea>
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
-            <mat-label>Rent price</mat-label>
-            <input matInput>
-          </mat-form-field>
-        </div>
-      </div>
-    </mat-card>
-  </div>
-  <div class="d-flex justify-content-end pb-5">
-    <div class="pr-5">
-      <button mat-button class="px-4" [routerLink]="['/rent']">Cancel</button>
-    </div>
-    <div>
-      <button mat-flat-button class="px-4" color="primary">Add my home</button>
-    </div>
-  </div>
 </div>
